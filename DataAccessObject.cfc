@@ -8,7 +8,7 @@
     muonSetupDataMgr(datasource, schemaPath);
     muonSetupModels(modelPrefix);
     return this;
-  }
+  }https://github.com/wris/incentRev/downloads
 
   function muonSetupDataMgr(datasource, schemaPath) {
     var isTest = reFindNoCase("_test$", datasource);
@@ -17,7 +17,9 @@
     } else {
       _muon.dataMgr = createObject("component", "external.dataMgr.DataMgr").init(datasource);
     }
-    _muon.dataMgr.loadXml(muonReadFile(schemaPath), isTest, isTest);
+    if (Len(Trim(schemaPath))) {
+	    _muon.dataMgr.loadXml(muonReadFile(schemaPath), isTest, isTest);
+    }
   }
 
   function muonSetupModels(modelPrefix) {
