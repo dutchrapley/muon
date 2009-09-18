@@ -10,6 +10,10 @@
     arrayAppend(_muonValidations, createObject("component", "validations.Confirmation").init(this, arguments));
   }
 
+  function validatesEmail() {
+    arrayAppend(_muonValidations, createObject("component", "validations.Email").init(this, arguments));
+  }
+
   function validatesExclusionOf() {
     arrayAppend(_muonValidations, createObject("component", "validations.Exclusion").init(this, arguments));
   }

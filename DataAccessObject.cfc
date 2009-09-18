@@ -98,12 +98,13 @@
     local.model = _muon.models[right(method, len(method) - 3)];
 
     local.args = { tableName = local.model.tableName };
+    local.args.data = {};
     if (isNumeric(listFirst(structKeyList(args)))) {
       local.count = arrayLen(args);
       if (local.count ge 1) local.args.data = args[1];
       if (local.count ge 2) local.args.fieldList = args[2];
     } else {
-      structAppend(local.args, args);
+      structAppend(local.args.data, args);
     }
     if (!isStruct(local.args.data)) {
       local.id = local.args.data;
