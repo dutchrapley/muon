@@ -8,7 +8,7 @@
     muonSetupDataMgr(datasource, schemaPath);
     muonSetupModels(modelPrefix);
     return this;
-  }https://github.com/wris/incentRev/downloads
+  }
 
   function muonSetupDataMgr(datasource, schemaPath) {
     var isTest = reFindNoCase("_test$", datasource);
